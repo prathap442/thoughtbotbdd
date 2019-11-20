@@ -1,0 +1,9 @@
+<%unless flash[:messages].blank?%>
+  <%= flash[:messages] %>
+<%end%>
+<%=@post.name%>
+<%=@post.description%>
+
+<%= link_to "Back", posts_path%>
+<%= link_to "Edit", edit_post_path(@post.id)%>
+<%= link_to "Delete", post_path(@post.id), method: :delete%>

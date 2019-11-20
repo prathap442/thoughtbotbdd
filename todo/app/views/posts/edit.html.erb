@@ -1,0 +1,4 @@
+<h1>Edit Post</h1>
+<%= form_for @post, method: :put do |f|%>
+  <%= render 'post',post: @post, form: f%>  
+<% end %>
