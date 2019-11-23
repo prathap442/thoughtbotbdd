@@ -1,29 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
 # rails g controller posts
 ```
      create  app/controllers/posts_controller.rb
@@ -41,3 +15,9 @@ Things you may want to cover:
       invoke    scss
       create      app/assets/stylesheets/posts.scss
 ```
+
+
+
+* now i tried to create the post with the signin of the user for this we need to make the small authenticated system for this i'm just accepting the email just with out the passcode
+
+* Now the same email is stored in the session variable and is checked for the authentication  
