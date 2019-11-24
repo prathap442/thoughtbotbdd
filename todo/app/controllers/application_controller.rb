@@ -15,4 +15,13 @@ class ApplicationController < ActionController::Base
       return false
     end
   end
+
+  def clear_all_the_user_sessions_timed_out
+    User.expired_users.each do |user|
+      if(user.email == session[:current_user]['email'])      
+        user.destroy
+        session[:current_user] = nil 
+      end  
+    end  
+  end
 end

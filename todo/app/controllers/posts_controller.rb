@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
-  before_action :authenticate
+  before_action :clear_all_the_user_sessions_timed_out,:authenticate
   
   def index
-    @posts = Post.all
+    @posts = Post.current_user_posts(session[:current_user]["email"])
   end
 
   def new
