@@ -18,10 +18,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Setup Ruby
-        uses: actions/setup-ruby@v1
+        uses: actions@setup-ruby@v1
         with:
           ruby-version: 2.6.x
-      - uses: borales/actions-yarn@2.0.0
+        # i dont know what borales has to do with and the error throws that  
+      - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install
       - name: Build and run tests
