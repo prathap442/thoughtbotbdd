@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Setup Ruby
-        uses: actions@setup-ruby@v1
+        uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
         # i dont know what borales has to do with and the error throws that  
