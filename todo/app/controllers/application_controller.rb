@@ -24,4 +24,15 @@ class ApplicationController < ActionController::Base
       end  
     end  
   end
+
+  def current_user_mail
+    if session[:current_user]
+      email = session[:current_user].email
+    end
+  end
+
+
+  def current_user
+    session[:current_user]
+  end
 end
